@@ -1,10 +1,20 @@
-<html>
-<body>
-<form action="one.php" method="get">
+<?php
 
-<input type="text" name="username">
+class Car{
+    public $color;
+    public $model;
 
-<button type="submit">Submit</button>
-</form>
-</body>
-</html>
+    public function __construct($color, $model){
+        $this->color = $color;
+        $this->model = $model;
+    }
+
+    public function message(){
+        return "My car is a " .$this->color . " " .$this->model;
+    }
+}
+
+$mycar = new Car("black","Auidi");
+echo $mycar->message();
+
+?>
